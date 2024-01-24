@@ -1,0 +1,15 @@
+header{
+  background-color: var(--primary);
+}
+.header__navigation {
+  display: grid;
+  grid-template-columns: 5% 85% 10%;
+}
+.header__logo {
+  margin: auto auto;
+}
+.header__name{
+  color: #fff;
+}
+
+

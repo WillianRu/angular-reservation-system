@@ -1,0 +1,40 @@
+<section class="container">
+
+  <h2 class="section__title"> Cartelera </h2>
+  <hr>
+
+  <div class="cards">
+    <div *ngFor="let card of films" class="card">
+      <img [src]="card.img">
+
+      <div class="card__heading">
+        <h2>{{ card.name }}</h2>
+      </div>
+
+      <div class="card__description">
+        <span class="card__item"><strong>Género:</strong> {{ card.genre }}. </span>
+        <span class="card__item"><strong>Duración:</strong>  {{ card.movieLength }} min.</span>
+      </div>
+
+    </div>
+  </div>
+
+  <h2 class="section__title"> Pronto </h2>
+  <hr>
+
+  <div class="cards">
+    <div *ngFor="let card of waiting" class="card">
+      <img [src]="card.img">
+
+      <div class="card__heading">
+        <h2>{{ card.name }}</h2>
+      </div>
+
+      <div class="card__description">
+        <span class="card__item"><strong>Género:</strong> {{ card.genre }}. </span>
+        <span class="card__item"><strong>Duración:</strong>  {{ card.movieLength }} min.</span>
+      </div>
+
+    </div>
+  </div>
+</section>

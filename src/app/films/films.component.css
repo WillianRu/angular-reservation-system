@@ -1,0 +1,18 @@
+.section__title{
+  margin-top: 1rem;
+}
+.cards{
+  display: flex;
+  flex-direction: row;
+}
+.card{
+  max-width: 30rem;
+  margin: 2%;
+}
+.card__heading{
+  text-align: justify;
+}
+.card__description{
+  display: flex;
+  flex-direction:column;
+}
