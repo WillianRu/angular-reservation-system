@@ -1,0 +1,53 @@
+.register-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Ancho del formulario */
+}
+
+.register-form input[type="email"],
+.register-form input[type="password"],
+.register-form input[type="text"],
+.register-form input[type="tel"]
+ {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.register-form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.register-text {
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+  color: #666;
+}
+
+.register-form input[type="submit"]:hover {
+  background: #555;
+}
+
+.register-title {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+.register-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #666;
+}

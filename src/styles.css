@@ -19,6 +19,7 @@ body {
 * {
   margin: 0;
   padding: 0;
+
 }
 h1, h2, h3 {
   font-weight: 300;
@@ -43,4 +44,12 @@ img {
   max-width: 150rem;
   margin: 0 auto;
   width: 90%;
+}
+.footer{
+  height: 130px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
 }
