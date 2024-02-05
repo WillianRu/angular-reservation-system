@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeModule } from './modules/home/home.module';
-import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 import { FilmsComponent } from './modules/home/pages/films/films.component';
 
 const routes: Routes = [
@@ -16,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: NotFoundComponent
+    redirectTo: 'home'
   }
 ];
 

@@ -1,13 +1,18 @@
-.login-form {
-  background: #fff;
-  padding: 20px;
+.login{
+  display: flex;
+  align-items: center;
+}
+.login__form {
+  margin: 10rem 2rem;
+  padding: 20rem;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 300px; /* Ancho del formulario */
+  height: 70rem;
+  width: 100%;
 }
 
-.login-form input[type="email"],
-.login-form input[type="password"] {
+.login__form input[type="email"],
+.login__form input[type="password"] {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -16,7 +21,7 @@
   box-sizing: border-box;
 }
 
-.login-form input[type="submit"] {
+.login__form input[type="submit"] {
   width: 100%;
   padding: 10px;
   border: none;
@@ -26,24 +31,24 @@
   cursor: pointer;
 }
 
-.register-text {
+.login__button {
   text-align: center;
   display: block;
   margin-top: 20px;
   color: #666;
 }
 
-.login-form input[type="submit"]:hover {
+.login__form input[type="submit"]:hover {
   background: #555;
 }
 
-.login-title {
+.login__title {
   margin-bottom: 30px;
   text-align: center;
   color: #333;
 }
 
-.login-form label {
+.login__form label {
   display: block;
   margin-bottom: 5px;
   color: #666;
