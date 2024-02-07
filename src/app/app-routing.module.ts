@@ -5,7 +5,6 @@ import { FilmsComponent } from './modules/home/pages/films/films.component';
 const routes: Routes = [
   {
     path: 'home',
-    component: FilmsComponent,
     loadChildren: () => import(`./modules/home/home.module`).then(m => m.HomeModule)
   },
   {
@@ -14,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'home'
+    redirectTo: 'home/films'
   }
 ];
 

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Route } from '@angular/router';
+import { FilmModel } from '../../../../core/models/film.model';
 
 @Component({
   selector: 'app-films',
@@ -70,4 +72,5 @@ export class FilmsComponent {
         movieLength: 105
       }
     ]
+
 }
