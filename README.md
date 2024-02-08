@@ -1,27 +1,23 @@
-# AngularReservationSystem
+# Sistema de Reserva de Asientos para Películas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
+## Descripción
 
-## Development server
+Este proyecto es un sistema de reserva de asientos para películas, diseñado para funcionar similar a un cine. Aunque los datos no están declarados de manera muy específica, el sistema soporta las operaciones CRUD (Crear, Leer, Actualizar, Borrar) completas.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+El sistema está organizado en varias vistas, separadas por módulos, incluyendo uno para autenticación y otro para la navegación principal. Además, utiliza un módulo de componentes compartidos para facilitar el desarrollo y mantenimiento del código.
 
-## Code scaffolding
+## Funcionalidades Actuales
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Interacción entre módulos:** Capacidad para navegar y utilizar funcionalidades entre los distintos módulos del sistema.
+- **Componentes estáticos:** Inclusión de componentes quemados (hard-coded) dentro del sistema, permitiendo visualizar algunos datos basados en directivas.
+- **Seguridad con JWT:** Implementación de seguridad mediante JSON Web Tokens (JWT), permitiendo la autenticación en la aplicación y el almacenamiento local del token para futuras transacciones.
 
-## Build
+## Funcionalidades Planeadas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Registro de usuarios:** Permitirá a los nuevos usuarios crear una cuenta en el sistema.
+- **CRUD de reservaciones:** Implementación completa de las operaciones CRUD para las reservaciones de asientos.
+- **Vistas de reservaciones:** Creación de vistas específicas para la gestión y visualización de reservaciones.
 
-## Running unit tests
+## Tema Favorito del Último Sprint: Guardianes
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Un aspecto destacado del último sprint fue la implementación de guardianes. Los guardianes son una herramienta eficaz para proteger las vistas del usuario, asegurando que solo los usuarios autenticados y autorizados puedan acceder a ciertas partes de la aplicación. Esta funcionalidad no solo mejora la seguridad del sistema sino que también añade una capa adicional de interactividad y control sobre el flujo de navegación del usuario.
