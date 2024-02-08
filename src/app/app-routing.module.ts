@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FilmsComponent } from './modules/home/pages/films/films.component';
+import { AuthGuard } from './core/guard/auth-guard.guard';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import(`./modules/home/home.module`).then(m => m.HomeModule)
-  },
   {
     path: 'auth',
     loadChildren:() => import(`./modules/auth/auth.module`).then(m => m.AuthModule)
   },
   {
+    path: 'home',
+    loadChildren: () => import(`./modules/home/home.module`).then(m => m.HomeModule),
+    canActivate: [AuthGuard]
+  },
+  {
     path: '**',
-    redirectTo: 'home/films'
+    redirectTo: 'auth/login'
   }
 ];
 
