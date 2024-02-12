@@ -13,8 +13,8 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  register(user: UserModel): Observable<any> {
-    return this.http.post(`${this.baseUrl}/register`, user);
+  register(user: UserModel): Observable<string> {
+    return this.http.post<string>(`${this.baseUrl}/register`, user, { responseType: 'text' as 'json' });
   }
 
   login(credentials: UserCredentialsModel): Observable<string> {
@@ -24,7 +24,6 @@ export class AuthService {
   public isAuthenticated(): boolean {
     const token = localStorage.getItem('token');
     return !!token;
-    // return false;
   }
 
 }

@@ -3,7 +3,7 @@ header{
 }
 .header__navigation {
   display: grid;
-  grid-template-columns: 5% 85% 10%;
+  grid-template-columns: 5% 87.5% 2.5% 5%;
 }
 .header__logo {
   margin: auto auto;
