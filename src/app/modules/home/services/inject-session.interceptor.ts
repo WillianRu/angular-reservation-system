@@ -10,7 +10,6 @@ export class injectSessionInterceptor implements HttpInterceptor {
 
     if (requiresAuth) {
       const authToken = localStorage.getItem('token');
-      console.log('Token retrieved from localStorage:', authToken);
 
       if (authToken) {
         request = request.clone({
@@ -18,7 +17,6 @@ export class injectSessionInterceptor implements HttpInterceptor {
             'Authorization': `Bearer ${authToken}`
           }
         });
-        console.log('Request with Authorization header:', request);
       } else {
         console.log('No auth token available.');
       }

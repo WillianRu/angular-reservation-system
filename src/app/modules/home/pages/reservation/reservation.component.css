@@ -1,7 +1,7 @@
 .booking {
   background: #fff;
   height: 90rem;
-  margin: 5rem 5rem 5rem 15rem;
+  margin: 5rem auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   display: grid;
   grid-template-columns: 1fr 1fr;
