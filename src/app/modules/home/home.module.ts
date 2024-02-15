@@ -7,6 +7,7 @@ import { SharedModule } from '../../shared/shared.module';
 import { ReservationComponent } from './pages/reservation/reservation.component';
 import { ReservationsComponent } from './pages/reservations/reservations.component';
 import { HomeComponent } from './pages/home/home.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { HomeComponent } from './pages/home/home.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
+    FormsModule,
     SharedModule
   ]
 })

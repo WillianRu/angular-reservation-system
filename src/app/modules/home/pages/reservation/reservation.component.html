@@ -1,1 +1,27 @@
-<p>reservation works!</p>
+<section class="booking container">
+
+  <div class="booking__image">
+      <img [src]="film?.img">
+  </div>
+
+  <div class="booking__info">
+    <div>
+        <h1>{{film?.name}}</h1>
+        <p>Duración: {{film?.movieLength}} min</p>
+        <p>Género: {{film?.genre}}</p>
+    </div>
+
+    <div class="booking__reservation">
+        <h2>¡Reserva ya!</h2>
+        <form class="reservation__form" (ngSubmit)="onSubmit()">
+          <label for="reservationDate">Fecha de reservación</label>
+          <input type="datetime-local" id="reservationDate" name="reservationDate" [(ngModel)]="reservationData.reservationDate" required>
+
+          <label for="seats">Número de asientos</label>
+          <input type="number" id="seats" name="seats" [(ngModel)]="reservationData.seatsNumber" min="1" required>
+
+          <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Route } from '@angular/router';
+import { Route, Router } from '@angular/router';
 import { FilmModel } from '../../../../core/models/film.model';
+import { FilmService } from '../../services/film.service';
 
 @Component({
   selector: 'app-films',
@@ -10,30 +11,35 @@ import { FilmModel } from '../../../../core/models/film.model';
 export class FilmsComponent {
   films = [
     {
+      id:1,
       name: 'Wonka',
       img: 'https://archivos-cms.cinecolombia.com/images/_aliases/exhibition_poster/5/9/8/5/45895-7-esl-CO/7c81efc87689-warner_wonka_cinecol_480x670.jpg',
       genre: 'Aventura, Comedia, familiar',
       movieLength: 117
     },
     {
+      id:2,
       name: 'Soul',
       img: 'https://archivos-cms.cinecolombia.com/images/_aliases/exhibition_poster/6/3/6/2/52636-1-esl-CO/ddad02939728-poster_480x670.png',
       genre: 'Animacion, aventura, comedia',
       movieLength: 100
     },
     {
+      id:3,
       name: 'Aquaman',
       img: 'https://archivos-cms.cinecolombia.com/images/_aliases/exhibition_poster/1/4/4/9/49441-1-esl-CO/4a01e94b2e5f-480x670.jpg',
       genre: 'Acción, aventura, fantasia',
       movieLength: 115
     },
     {
+      id:4,
       name: 'Wish',
       img: 'https://archivos-cms.cinecolombia.com/images/_aliases/exhibition_poster/7/6/8/4/44867-5-esl-CO/5a5734caa819-poster_480x670.png',
       genre: 'Animacion, aventura, comedia',
       movieLength: 92
     },
     {
+      id:5,
       name: 'Radical',
       img: 'https://archivos-cms.cinecolombia.com/images/_aliases/exhibition_poster/9/6/1/1/51169-5-esl-CO/d5a66f72f9b0-2_poster_480x670.png',
       genre: 'Drama',
@@ -73,4 +79,10 @@ export class FilmsComponent {
       }
     ]
 
+    constructor(private filmService: FilmService, private router: Router) { }
+
+    selectFilm(card: FilmModel) {
+      this.filmService.changeFilm(card);
+      this.router.navigate(['/home/reservation']);
+    }
 }

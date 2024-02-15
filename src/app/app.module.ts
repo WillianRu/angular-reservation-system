@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { AuthGuard } from './core/guard/auth-guard.guard';
+import { injectSessionInterceptor } from './modules/home/services/inject-session.interceptor';
 
 
 @NgModule({
@@ -18,7 +18,9 @@ import { AuthGuard } from './core/guard/auth-guard.guard';
     HttpClientModule,
     FormsModule
   ],
-  providers: [AuthGuard],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: injectSessionInterceptor, multi: true },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

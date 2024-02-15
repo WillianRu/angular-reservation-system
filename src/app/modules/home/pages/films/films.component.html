@@ -4,7 +4,7 @@
   <hr>
 
   <div class="cards">
-    <div *ngFor="let card of films" class="card">
+    <div *ngFor="let card of films" class="card" (click)="selectFilm(card)">
       <img [src]="card.img">
 
       <div class="card__heading">
