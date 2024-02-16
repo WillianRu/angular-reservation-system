@@ -20,4 +20,9 @@ export class ReservationService {
   getReservations(): Observable<ReservationsModel[]> {
     return this.http.get<ReservationsModel[]>(this.baseUrl);
   }
+
+  deleteReservation(id: number): Observable<any> {
+    const url = `${this.baseUrl}/${id}`; // Asegúrate de usar el ID en la URL
+    return this.http.delete(url);
+  }
 }

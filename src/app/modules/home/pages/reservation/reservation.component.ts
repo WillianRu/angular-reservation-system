@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FilmModel } from '../../../../core/models/film.model';
 import { FilmService } from '../../services/film.service';
 import { ReservationModel } from '../../../../core/models/reservation.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reservation',
@@ -19,7 +20,7 @@ export class ReservationComponent implements OnInit {
     seatsNumber: 0
   }
 
-  constructor(private filmService: FilmService, private reservationService: ReservationService) { }
+  constructor(private filmService: FilmService, private reservationService: ReservationService, private router: Router) { }
 
   ngOnInit() {
     this.filmService.currentFilm.subscribe(film => {
@@ -36,11 +37,11 @@ export class ReservationComponent implements OnInit {
 
 
   onSubmit(){
-    //this.reservationData.reservationDate = new Date(this.reservationData.reservationDate);
     console.log(this.reservationData);
     this.reservationService.register(this.reservationData).subscribe({
       next: (response) => {
         console.log('Usuario creado', response);
+        this.router.navigate(['/home/films']);
       },
       error: (error) => {
         console.error('Error al crear el usuario', error);

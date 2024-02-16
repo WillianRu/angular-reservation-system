@@ -27,4 +27,12 @@ export class ReservationsComponent {
       console.error('Error al obtener las reservaciones', error);
     });
   }
+
+  deleteReservation(id : number){
+    this.reservationservice.deleteReservation(id).subscribe(data => {
+      this.loadReservations();
+    }, error => {
+      console.error('Error al eliminar la reservación', error);
+    });
+  }
 }

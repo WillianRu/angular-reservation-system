@@ -1,19 +1,17 @@
 <section class="container">
-
-  <h2 class="section__title"> Tus reservaciones:  </h2>
+  <h2 class="section__title">Tus reservaciones:</h2>
   <hr>
-
   <div class="cards">
     <div *ngFor="let card of reservations" class="card">
       <div class="card__heading">
         <h2>{{ card.movie.name }}</h2>
       </div>
-
       <div class="card__description">
-        <span class="card__item"><strong>Asientos:</strong> {{ card.seatsNumber }}. </span>
-        <span class="card__item"><strong>Fecha:</strong>  {{ card.reservationDate }} </span>
+        <span class="card__item"><strong>Asientos:</strong> {{ card.seatsNumber }}.</span>
+        <span class="card__item"><strong>Fecha:</strong> {{ card.reservationDate | formatDate}}</span>
       </div>
-
+      <!-- Botón de eliminar dentro del bucle *ngFor -->
+      <button (click)="deleteReservation(card.id)" class="card__delete-btn">Eliminar</button>
     </div>
   </div>
 </section>
